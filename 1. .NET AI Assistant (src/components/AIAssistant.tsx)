@@ -1,0 +1,4 @@
+import { GoogleGenAI } from "@google/genai";
+// ... Component uses react-markdown for rich code formatting
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+// systemInstruction ensures responses stay focused on .NET Core 6+
