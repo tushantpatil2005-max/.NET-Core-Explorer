@@ -1,0 +1,13 @@
+export default function App() {
+  const [activeTab, setActiveTab] = useState("overview");
+  return (
+    <div className="flex h-screen bg-slate-50">
+      <Sidebar activeId={activeTab} onSelect={setActiveTab} />
+      <main className="flex-1 overflow-y-auto">
+        <AnimatePresence mode="wait">
+          {/* Renders Overview, CLI, Architecture, or AI tabs with motion animations */}
+        </AnimatePresence>
+      </main>
+    </div>
+  );
+}
