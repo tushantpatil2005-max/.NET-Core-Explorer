@@ -1,0 +1,8 @@
+export default function CommandExplorer() {
+  const [searchTerm, setSearchTerm] = useState("");
+  // Filter commands from centralized constants.ts
+  const filteredCommands = DOTNET_COMMANDS.filter(cmd => 
+    cmd.command.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  // ... maps through commands with "Copy to CLI" button
+}
